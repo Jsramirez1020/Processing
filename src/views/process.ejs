@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <title>Procesamiento de imagen con álgebra lineal</title>
     <link rel="stylesheet" href="/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="/script.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.2/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jimp/0.16.2/jimp.min.js"></script>
+    <script type="module" src="/procesamiento-imagen.js"></script>
   </head>
   <body>
     <div class="d-flex flex-column justify-content-center w-100 h-100">
       <div class="d-flex flex-column justify-content-center align-items-center">
         <h1 class="fw-light text-white m-0">Procesamiento de imagen con álgebra lineal</h1>
-        <label>Seleccione un archivo
-          <input type="file" id="input-file" accept="image/png" class="input-file">
-       </label>
-        <br>
-          <button id="process-btn" class="btn btn-outline-light btn-group my-5" >Procesar imagen</button>
-        <br>
-        <img id="original-img">
-        <img id="processed-img">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.2/math.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jimp/0.16.2/jimp.min.js"></script>
-        <script src="../procesamiento-imagen1.js"></script>
-      </div>    
+        <div class='file-input' class=" -chosen">
+            <input type="file" id="f02" accept="image/png">
+            <span class='btn2'>Choose</span>
+            <span class='label' data-js-label>No file selected
+            </span>
+            <br>
+            <br>
+            <br>
+          <br>
+            <button id="process-btn" class="btn btn-outline-light btn-group my-5" >Procesar imagen</button>
+          <br>
+          <img id="original-img">
+          <br>
+          <img id="processed-img">
+          <br>
+        </div>    
+      </div>
     </div>    
   </body>
 </html>

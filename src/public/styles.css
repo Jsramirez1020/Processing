@@ -54,15 +54,18 @@ h1{
   margin-inline-end: 0px;
 }
 .my-5{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.btn-group{
+.btn-group:hover{
   position: relative;
   display: inline-flex;
   vertical-align: middle;
+  background: rgb(2, 16, 59);
 }
+
+
 
 .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
   border-top-right-radius: 0;
@@ -98,6 +101,7 @@ h1{
   ease-in-out,border-color .15s 
   ease-in-out,box-shadow .15s 
   ease-in-out;
+  
 }
 
 *, ::after, ::before {
@@ -127,7 +131,7 @@ h1{
 ::placeholder{
   color: white;
 }
-label{
+/*label{
   background: transparent;
   border: none;
   border-left: 2px solid rgba(255, 255, 255, .3);
@@ -145,9 +149,86 @@ label{
   transition: all .3s;
   margin-bottom: 2em;
 }
-input[type="file"] {
-  display: none;
+[type=file]{
+  position: absolute;
+    filter: alpha(opacity=0);
+    opacity: 0; 
 }
+input[type=file]+ label {
+      border: 1px solid #CCC;
+      border-radius: 3px;
+      text-align: left;
+      padding: 10px;
+      width: 150px;
+      margin: 0;
+      left: 0;
+      position: relative;  
+}
+
+[type=file] + label {
+  text-align: center;
+  left: 7.35em;
+  top: 0.5em;
+  
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+ label:hover {
+  background: black;
+}*/
+
+.file-input {
+  display: inline-block;
+  text-align: left;
+  background: #fff;
+  padding: 1rem;
+  width: 400px;
+  height: 60px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.file-input > [type='file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.file-input > .btn2 {
+  display: inline-block;
+  cursor: pointer;
+  background: #eee;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.file-input:hover > .btn2 {
+  background: dodgerblue;
+  color: white;
+}
+
+.file-input > .label {
+  color: #333;
+  white-space: nowrap;
+  opacity: .3;
+}
+
+.file-input.-chosen > .label {
+  opacity: 1;
+}
+
+
+
+
 
 
 
